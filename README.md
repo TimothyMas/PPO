@@ -1,7 +1,7 @@
 # MedGen
 
 ## Overview
-The Health Data Analysis application is a powerful tool designed to assist medical professionals and health data analysts in understanding and interpreting health metrics. Utilizing the robust capabilities of the C++ language and the Qt framework, along with advanced machine learning techniques provided by Python's scikit-learn library, this app offers insightful data analysis, predictive modeling, and clear visualizations.
+The Health Data Analysis application is a powerful tool designed to assist medical professionals and health data analysts in understanding and interpreting health metrics. Utilizing the robust capabilities of the C++ language and the Qt framework, along with advanced machine learning techniques provided by Python's scikit-learn library, this app offers insightful data analysis, predictive modelling, and clear visualizations.
 
 ## Features
 - **Data Generation**: Simulate patient health data including heart rate, blood pressure, and glucose levels.
@@ -22,10 +22,10 @@ Ensure you have the following prerequisites installed:
 ## Usage
 After installing the necessary dependencies, compile the application using Qt Creator or your preferred C++ IDE.
 
-Run the application, and use the GUI to generate new patient data, save to CSV, or perform data analysis. For machine learning features, ensure the Python environment is correctly set up with all dependencies installed.
+Run the application, and use the GUI to generate new patient data, save it to CSV, or perform data analysis. For machine learning features, ensure the Python environment is correctly set up with all dependencies installed.
 
 ## Machine Learning Pipeline
-The app incorporates a sophisticated machine learning pipeline that includes:
+The app incorporates a sophisticated machine-learning pipeline that includes:
 
 - Data preprocessing with scaling and normalization
 - Hyperparameter tuning with RandomizedSearchCV
