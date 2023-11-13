@@ -35,7 +35,7 @@ The app incorporates a sophisticated machine-learning pipeline that includes:
 Contributions to the Health Data Analysis app are welcome! Please feel free to submit pull requests or open issues to suggest enhancements or report bugs.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md] file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
 ## Contact
 For any questions or comments, please feel free to reach out to the repository owner.
