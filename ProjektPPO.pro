@@ -9,6 +9,7 @@ SOURCES += \
         mainppo.cpp
 
 HEADERS += \
+        MachineLearningResultDialog.h \
         mainppo.h \
         patientprofile.h \
         ui_mainppo.h
@@ -24,4 +25,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     darkmode.qss \
     data_analysis.py \
-    lightmode.qss
+    images/darkmode_icon.png \
+    images/exit_icon.png \
+    images/lightmode_icon.png \
+    images/medgen.png \
+    lightmode.qss \
+    machine_learning.py \
+    theme/darkmode.qss \
+    theme/lightmode.qss

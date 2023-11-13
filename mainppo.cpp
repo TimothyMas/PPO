@@ -1,4 +1,5 @@
 #include "mainppo.h"
+#include "MachineLearningResultDialog.h"
 #include "ui_mainppo.h"
 #include "patientprofile.h"
 
@@ -176,6 +177,8 @@ MainPPO::MainPPO(QWidget *parent)
 
     connect(ui->actionStandardDeviation, &QAction::triggered, this, &MainPPO::StandardDeviation);
     connect(ui->actionVariance, &QAction::triggered, this, &MainPPO::Variance);
+
+    connect(ui->runMLButton, &QPushButton::clicked, this, &::MainPPO::on_runMLButton_clicked);
 
     srand(time(0));
 
@@ -1097,4 +1100,73 @@ void MainPPO::prepareDataForMachineLearning()
     outputFile.close();
 
     QMessageBox::information(this, "Success", "The machine learning data file has been created at: " + outputFilePath);
+}
+
+void MainPPO::runMachineLearning()
+
+{
+    QProcess process;
+    QString scriptPath = "C:/Users/tymek/OneDrive/Pulpit/Studia/Programowanie/C++/Projekt na PPO/ProjektPPO/machine_learning.py";
+    QString pythonExecutable = "D:/Python/python.exe"; // or the full path to the Python executable
+
+    process.start(pythonExecutable, QStringList() << scriptPath);
+
+    if (!process.waitForFinished(-1))
+
+    { // -1 for no timeout
+        QMessageBox::critical(this, "Error", "The Python script failed to finish.");
+        return;
+    }
+
+    QString output = process.readAllStandardOutput();
+    QString errorOutput = process.readAllStandardError();
+
+    // Instantiate and show the custom dialog with the results
+    MachineLearningResultDialog *dialog = new MachineLearningResultDialog(this);
+    dialog->setResultText(output + "\n" + errorOutput);
+    dialog->setAttribute(Qt::WA_DeleteOnClose); // Ensure dialog is deleted after closing
+    dialog->exec(); // Show the dialog as a modal window
+}
+
+void MainPPO::on_runMLButton_clicked()
+
+{
+    // The QProcess object to run the Python script
+    QProcess process;
+
+    // Get the path to the user's desktop
+    QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
+
+    // The path to the CSV file on the desktop
+    QString csvFilePath = desktopPath + "/machine_learning_data.csv";
+
+    // Set the working directory of the QProcess to the desktop
+    process.setWorkingDirectory(desktopPath);
+
+    // Make sure the path to your Python script is correct
+    QString scriptPath = "C:/Users/tymek/OneDrive/Pulpit/Studia/Programowanie/C++/Projekt na PPO/ProjektPPO/machine_learning.py";
+
+    // If you use a virtual environment, you might need to specify the full path to the Python executable
+    QString pythonExecutable = "D:/Python/python.exe";
+
+    // Start the Python script execution with the CSV file as an argument
+    process.start(pythonExecutable, QStringList() << scriptPath << csvFilePath);
+
+    // Wait for the script to finish and check for errors
+    if (!process.waitForFinished())
+
+    {
+        QMessageBox::critical(this, "Error", "The Python script did not finish successfully.");
+        return;
+    }
+
+    // Read the output from the Python script
+    QString output = process.readAllStandardOutput();
+    QString errorOutput = process.readAllStandardError();
+
+    // Instantiate and show the custom dialog with the results
+    MachineLearningResultDialog *dialog = new MachineLearningResultDialog(this);
+    dialog->setResultText(output + "\n" + errorOutput);
+    dialog->setAttribute(Qt::WA_DeleteOnClose); // Ensure the dialog is deleted after closing
+    dialog->show(); // Non-modal display
 }

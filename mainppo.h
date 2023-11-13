@@ -21,6 +21,7 @@ class MainPPO : public QMainWindow
 public:
 
     void prepareDataForMachineLearning();
+    void runMachineLearning();
 
     explicit MainPPO(QWidget *parent = nullptr);
     ~MainPPO();
@@ -43,6 +44,8 @@ private slots:
     void on_actionExit_triggered();
     void on_analyzeDataButton_clicked();
     void on_actionSet_Default_Directory_triggered();
+
+    void on_runMLButton_clicked();
 
 private:
     Ui::MainPPO *ui;

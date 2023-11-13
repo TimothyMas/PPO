@@ -36,6 +36,8 @@ public:
     QAction *actionVariance;
     QAction *actionStandardDeviation;
 
+    QPushButton *runMLButton;
+
     QAction *actionExit;
     QAction *actionSet_Default_Directory;
     QWidget *centralwidget;
@@ -111,6 +113,11 @@ public:
         analyzeDataButton->setObjectName("analyzeDataButton");
 
         gridLayout->addWidget(analyzeDataButton, 4, 1, 1, 1);
+
+        runMLButton = new QPushButton(centralwidget);
+        runMLButton->setObjectName("runMLButton");
+
+        gridLayout->addWidget(runMLButton, 5, 0, 1, 1);
 
         generateDataButton = new QPushButton(centralwidget);
         generateDataButton->setObjectName("generateDataButton");
@@ -213,12 +220,15 @@ public:
 
         LoadData->setText(QCoreApplication::translate("MainPPO", "Load Data", nullptr));
         label_2->setText(QCoreApplication::translate("MainPPO", "Number of Patients :", nullptr));
+
         analyzeDataButton->setText(QCoreApplication::translate("MainPPO", "Analyze Data", nullptr));
         generateDataButton->setText(QCoreApplication::translate("MainPPO", "Generate Data", nullptr));
-        label_3->setText(QCoreApplication::translate("MainPPO", "Number of Measurements:", nullptr));
-        themeSwitchButton->setText(QCoreApplication::translate("MainPPO", "Change Theme", nullptr));
-        label->setText(QCoreApplication::translate("MainPPO", "Patients Data:", nullptr));
         saveToCSVButton->setText(QCoreApplication::translate("MainPPO", "Save to CSV", nullptr));
+        themeSwitchButton->setText(QCoreApplication::translate("MainPPO", "Change Theme", nullptr));
+        runMLButton->setText(QCoreApplication::translate("MainPPO", "Run Machine Learning", nullptr));
+
+        label_3->setText(QCoreApplication::translate("MainPPO", "Number of Measurements:", nullptr));
+        label->setText(QCoreApplication::translate("MainPPO", "Patients Data:", nullptr));
         menuAnalysis->setTitle(QCoreApplication::translate("MainPPO", "Analysis", nullptr));
         menuExit->setTitle(QCoreApplication::translate("MainPPO", "Options", nullptr));
     } // retranslateUi
