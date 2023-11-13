@@ -1,0 +1,8 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>"C:/Users/tymek/OneDrive/Pulpit/Studia/Programowanie/C++/Projekt na PPO/ProjektPPO/images/medgen.png"</file>
+        <file>theme/lightmode.qss</file>  <!-- Add your light mode QSS file here -->
+        <file>theme/darkmode.qss</file>  <!-- Add your dark mode QSS file here -->
+    </qresource>
+</RCC>
