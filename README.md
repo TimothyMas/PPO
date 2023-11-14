@@ -14,7 +14,7 @@ The Health Data Analysis application is a powerful tool designed to assist medic
 ## Installation
 To get started with the Health Data Analysis app, clone this repository to your local machine using the following command:
 
-https://github.com/TimothyMas/health-data-analysis-app.git
+https://github.com/TimothyMas/PPO.git
 
 Ensure you have the following prerequisites installed:
 - Qt (5.15 or later recommended)
