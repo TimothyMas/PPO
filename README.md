@@ -9,6 +9,10 @@ The Health Data Analysis application is a powerful tool designed to assist medic
 - **Data Generation**: Simulate patient health data including heart rate, blood pressure, and glucose levels.
 - **CSV Export**: Export generated data to CSV files for easy sharing and further analysis.
 - **Health Data Overview**: View an organized summary of patient health data directly in the UI.
+- **Data Analysis**: Simple data analysis like variance or standard deviation.
+
+![Analysis](images/Analysis.png "Application analysis capabilities")
+
 - **Machine Learning Integration**: Leverage machine learning to identify patterns and predict health outcomes.
 - **Data Visualization**: Generate confusion matrices and other charts to visualize the analysis results.
 - **Cross-validation**: Validate the machine learning model's performance with Stratified K-Fold cross-validation.
