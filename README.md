@@ -3,6 +3,8 @@
 ## Overview
 The Health Data Analysis application is a powerful tool designed to assist medical professionals and health data analysts in understanding and interpreting health metrics. Utilizing the robust capabilities of the C++ language and the Qt framework, along with advanced machine learning techniques provided by Python's scikit-learn library, this app offers insightful data analysis, predictive modelling, and clear visualizations.
 
+![MedGen UI](images/AppUI.png "Application UI")
+
 ## Features
 - **Data Generation**: Simulate patient health data including heart rate, blood pressure, and glucose levels.
 - **CSV Export**: Export generated data to CSV files for easy sharing and further analysis.
@@ -11,7 +13,7 @@ The Health Data Analysis application is a powerful tool designed to assist medic
 - **Data Visualization**: Generate confusion matrices and other charts to visualize the analysis results.
 - **Cross-validation**: Validate the machine learning model's performance with Stratified K-Fold cross-validation.
 
-![MedGen UI](images/AppUI.png "Application UI")
+![MachineLearning](images/MachineLearning.png "UI of Machine Learning")
 
 ## Installation
 To get started with the Health Data Analysis app, clone this repository to your local machine using the following command:
