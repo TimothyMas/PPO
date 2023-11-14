@@ -11,6 +11,8 @@ The Health Data Analysis application is a powerful tool designed to assist medic
 - **Data Visualization**: Generate confusion matrices and other charts to visualize the analysis results.
 - **Cross-validation**: Validate the machine learning model's performance with Stratified K-Fold cross-validation.
 
+![Screenshot of Application](images/AppUI "Application Screenshot")
+
 ## Installation
 To get started with the Health Data Analysis app, clone this repository to your local machine using the following command:
 
