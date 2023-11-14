@@ -16,9 +16,9 @@ The Health Data Analysis application is a powerful tool designed to assist medic
 - **Machine Learning Integration**: Leverage machine learning to identify patterns and predict health outcomes.
 - **Data Visualization**: Generate confusion matrices and other charts to visualize the analysis results.
 
-![Plot1](images/Plot1.png "Plot1")
-![Plot2](images/Plot2.png "Plot1")
-![Plot3](images/Plot3.png "Plot1")
+![Plot 1](images/Plot1.png "Plot 1") 
+![Plot 2](images/Plot2.png "Plot 2") 
+![Plot 3](images/Plot3.png "Plot 3")
 
 - **Cross-validation**: Validate the machine learning model's performance with Stratified K-Fold cross-validation.
 
