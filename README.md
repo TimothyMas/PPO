@@ -1,7 +1,7 @@
 # MedGen
 
 ## Overview
-The Health Data Analysis application is a powerful tool designed to assist medical professionals and health data analysts in understanding and interpreting health metrics. Utilizing the robust capabilities of the C++ language and the Qt framework, along with advanced machine learning techniques provided by Python's scikit-learn library, this app offers insightful data analysis, predictive modelling, and clear visualizations.
+The Health Data Analysis application is a tool designed to assist medical professionals and health data analysts in understanding and interpreting health metrics. Utilizing the robust capabilities of the C++ language and the Qt framework, along with advanced machine learning techniques provided by Python's scikit-learn library, this app offers insightful data analysis, predictive modelling, and clear visualizations.
 
 ![MedGen UI](images/AppUI.png "Application UI")
 
